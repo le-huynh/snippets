@@ -1,0 +1,59 @@
+# ------------------------------------------------------------
+# scripting
+# ------------------------------------------------------------
+
+snippet my-code
+	`r text = c("#---\n",
+	"# code_name.R\n",
+	"#\n",
+	"# This Rscript:\n",
+	"# * do task 1\n",
+	"# * do task 2\n",
+	"# Note: something here\n",
+	"#\n",
+	"# Dependencies...\n",
+	"# data/process/data_name.csv\n",
+	"# code/get_tidy_data.R\n",
+	"#\n",
+	"# Produces...\n",
+	"# results/figures/fig_name.png\n",
+	"#---\n")
+	
+	paste(text, collapse = "")`
+
+
+snippet my-notebook
+	`r text = c("#'---\n",
+	"#' title: [optional]\n",
+	"#' output: github_document\n",
+	"#'---\n",
+	"\n",
+	"#+ message=FALSE\n",
+	"# snippet my-lib\n",
+	"\n",
+	"#' ### Data\n",
+	"\n",
+	"# rmarkdown::render()\n")
+	
+	paste(text, collapse = "")`
+
+
+snippet my-lib
+	pacman::p_load(
+		rio,            # import and export files
+		here,           # locate files 
+		tidyverse       # data management and visualization
+	)
+
+
+
+
+
+
+
+
+
+
+
+
+
