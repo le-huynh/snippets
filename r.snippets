@@ -25,13 +25,19 @@ snippet my-code
 snippet my-notebook
 	`r text = c("#'---\n",
 	"#' title: [optional]\n",
-	"#' output: github_document\n",
+	"#' output:\n",
+	"#'  html_document:\n",
+	"#'    toc: true\n",
+	"#'    toc_depth: 2\n",
+	"#'    toc_float: true\n",
+	"#'    keep_md: true\n",
 	"#'---\n",
 	"\n",
 	"#+ message=FALSE\n",
 	"# snippet my-lib\n",
 	"\n",
-	"#' ### Data\n",
+	"#' ## Data\n",
+	"# data #-----------\n",
 	"\n",
 	"# rmarkdown::render()\n")
 	
@@ -44,16 +50,5 @@ snippet my-lib
 		here,           # locate files 
 		tidyverse       # data management and visualization
 	)
-
-
-
-
-
-
-
-
-
-
-
 
 
